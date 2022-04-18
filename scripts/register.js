@@ -51,10 +51,11 @@ let pets =[{
 console.log(petSalon);
 
 function displaySalonInfo(){
-    document.getElementById("salon").innerHTML=`${petSalon}`;
+    document.getElementById("salon").innerHTML=`<p>${petSalon}</p>`;
 }
 
 displaySalonInfo();
+
 
 function displayPetsNames(){
     for(let i=0;i<pets.length;i++){
