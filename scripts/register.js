@@ -8,9 +8,9 @@ let petSalon = {
     hours:{
         open:"9:00 a.m.",
         close:"8:00 p.m."
-    },
-    pets:[
-        {
+    }
+}
+let pets =[{
             name:"Scooby",
             age:50,
             breed:"Dane",
@@ -46,15 +46,23 @@ let petSalon = {
             ownersName:"Seth",
             contactPhone:"619-555-4444"
         }
-    ]
-}
+    ];
 
 console.log(petSalon);
 
 function displaySalonInfo(){
-
+    document.getElementById("salon").innerHTML=`${petSalon}`;
 }
+
+displaySalonInfo();
 
 function displayPetsNames(){
+    for(let i=0;i<pets.length;i++){
+        console.log(`<li>${pets[i].name}</li>`);
 
+        document.getElementById("pets").innerHTML+=`<li>${pets[i].name}</li>`;
+
+    }
 }
+
+displayPetsNames();
