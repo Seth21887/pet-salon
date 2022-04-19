@@ -49,6 +49,7 @@ let scooby = new Pet("Scooby",50,"Dane","Male","Grooming","Shaggy","555-555-5555
 let scrappy = new Pet("Scrappy",40,"Mixed","Male","Grooming","Shaggy","555-555-5555");
 let bowser = new Pet("Bowser", 12, "English Bulldog", "Male", "Grooming", "Seth", "619-555-4444");
 let tommyPickles = new Pet("Tommy Pickles",6,"Pug","Male","Grooming","Seth","619-555-4444");
+petSalon.pets.push(scooby,scrappy,bowser,tommyPickles);
 
 console.log(scooby,scrappy,bowser,tommyPickles);
 
