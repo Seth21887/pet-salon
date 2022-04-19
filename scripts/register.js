@@ -51,7 +51,7 @@ let pets =[{
 console.log(petSalon);
 
 function displaySalonInfo(){
-    document.getElementById("salon").innerHTML=`<p>${petSalon.name} ${petSalon.address.street} ${petSalon.address.number} ${petSalon.address.zip} ${petSalon.hours.open} ${petSalon.hours.close}</p>`;
+    document.getElementById("salon").innerHTML=`<p>${petSalon.name} <br>Address: ${petSalon.address.number} ${petSalon.address.street} ${petSalon.address.zip} <br>Hours of Operation: ${petSalon.hours.open} to ${petSalon.hours.close}</p>`;
 }
 
 displaySalonInfo();

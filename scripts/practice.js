@@ -45,31 +45,33 @@ let client1 = {
 
 console.log(client1);
 
-let students=[{
-    //attr:value,
-    firstName:"Astrid",
-    lastName:"Batres-Guerrero",
-    age:25,
-    isActive:true
-},
-{
-    firstName:"Seth",
-    lastName:"LaFountain",
-    age:22,
-    isActive:true
-},
-{
-    firstName:"Ben",
-    lastName:"Vance",
-    age:25,
-    isActive:false,
-    hobbies:["listen to music", "read", "play zelda"],
-    address:{
-        street: "Palm Street",
-        zip: "22796",
-        number:"262-k"
-    }
-}];
+// let students=[{
+//     //attr:value,
+//     firstName:"Astrid",
+//     lastName:"Batres-Guerrero",
+//     age:25,
+//     isActive:true
+// },
+// {
+//     firstName:"Seth",
+//     lastName:"LaFountain",
+//     age:22,
+//     isActive:true
+// },
+// {
+//     firstName:"Ben",
+//     lastName:"Vance",
+//     age:25,
+//     isActive:false,
+//     hobbies:["listen to music", "read", "play zelda"],
+//     address:{
+//         street: "Palm Street",
+//         zip: "22796",
+//         number:"262-k"
+//     }
+// }];
+
+//object constructor
 
 function displayStudent(){
     let tmp=""
