@@ -12,6 +12,7 @@ let petSalon = {
     pets:[]
 }
 //name,age,gender,breed,service,owner name, contact phone
+//this is the constructor model
 function Pet(name,age,breed,gender,service,ownersName,contactPhone){
     this.name=name;
     this.age=age;
@@ -31,14 +32,34 @@ let inputService=document.getElementById("selService");
 let inputOwner=document.getElementById("txtOwner");
 let inputPhone=document.getElementById("txtPhone");
 
+function isValid(aPet){
+    //return false value when the pet is not valid
+    //return true value if the pet is valid
+    let valid=true;
+    if(aPet.name.length==0){ //this means name is blank, not valid
+        valid=false;
+        console.error("Invalid name");
+    }
+    if(aPet.service.length==0){
+        valid=false;
+        console.error("Invalid service");
+    }
+    if(aPet.age.length==0){
+        valid=false;
+        console.error("Invalid age");
+    }
+    return valid; //it could be true or false
+}
 function register(){
     //create the pet
     let thePet = new Pet(inputName.value,inputAge.value,inputGender.value,inputBreed.value,inputService.value,inputOwner.value,inputPhone.value);
-    console.log(thePet);
+    if(isValid(thePet)){
     //push the pet into the array
     petSalon.pets.push(thePet);
+    displayCards();
     //clear the inputs
     clearInputs();
+    }
 }
 
 function clearInputs(){
@@ -56,6 +77,7 @@ let scrappy = new Pet("Scrappy",40,"Mixed","Male","Grooming","Shaggy","555-555-5
 let bowser = new Pet("Bowser", 12, "English Bulldog", "Male", "Grooming", "Seth", "619-555-4444");
 let tommyPickles = new Pet("Tommy Pickles",6,"Pug","Male","Grooming","Seth","619-555-4444");
 petSalon.pets.push(scooby,scrappy,bowser,tommyPickles);
+displayCards();
 
 console.log(scooby,scrappy,bowser,tommyPickles);
 
