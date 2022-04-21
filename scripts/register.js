@@ -42,7 +42,13 @@ function register(){
 }
 
 function clearInputs(){
-
+    inputName.value="";
+    inputAge.value="";
+    inputGender.value="";
+    inputBreed.value="";
+    inputService.value="";
+    inputOwner.value="";
+    inputPhone.value="";
 }
 
 let scooby = new Pet("Scooby",50,"Dane","Male","Grooming","Shaggy","555-555-5555");
