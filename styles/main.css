@@ -40,3 +40,7 @@ main{
     border: 3px solid black;
     padding:10px;
 }
+
+.petTable{
+    border: 1px solid black;
+}
