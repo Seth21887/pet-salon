@@ -11,6 +11,8 @@ let petSalon = {
     },
     pets:[]
 }
+
+let c=0; //this is a counter var
 //name,age,gender,breed,service,owner name, contact phone
 //this is the constructor model
 function Pet(name,age,breed,gender,service,ownersName,contactPhone){
@@ -21,6 +23,7 @@ function Pet(name,age,breed,gender,service,ownersName,contactPhone){
     this.service=service;
     this.ownersName=ownersName;
     this.contactPhone=contactPhone;
+    this.id=c++; //increase the var 1 every time its used
 }
 
 //get the info from the inputs and store the information
@@ -70,6 +73,53 @@ function clearInputs(){
     inputService.value="";
     inputOwner.value="";
     inputPhone.value="";
+}
+
+function deletePet(petID){
+    //previous actions
+        //we need an id in the pet constructor
+        //we need a delete button in the HTML
+    console.log("Deleting " + petID);
+    //in this function
+        //travel the array (for loop)
+    let deleteIndex;
+    for(let i=0;i<petSalon.pets.length;i++){
+        let pet = petSalon.pets[i];
+        if(petID==pet.id){
+            deleteIndex=i;
+            console.log("I found it in position: " + i);
+        }
+        
+        //find the id (if function)
+        //get the position in the array (store in a variable)
+    }
+        
+        //remove from the array (splice())
+        petSalon.pets.splice(deleteIndex,1);
+        //remove from the HTML (remove())
+        document.getElementById(petID).remove();
+        //display to the user a message
+}
+
+function searchPet(){
+    //previous actions
+        //add an inputSearch on the html
+        //add a search button on the HTML
+        //get the string
+        let searchString = document.getElementById("txtSearch").value;
+        console.log("Searching " + searchString);
+    //in this function
+        //travel the array (for loop)
+    for(let i=0;i<petSalon.pets.length;i++){
+        let pet = petSalon.pets[i];
+        if(searchString.toLowerCase() === pet.name.toLowerCase()){
+            document.getElementById(pet.id).classList.add("highlight");
+        }else{
+            document.getElementById(pet.id).classList.remove("highlight");
+        }
+    }
+        //find the id (if function)
+        //highlight the result
 }
 
 let scooby = new Pet("Scooby",50,"Dane","Male","Grooming","Shaggy","555-555-5555");

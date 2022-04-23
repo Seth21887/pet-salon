@@ -41,6 +41,11 @@ main{
     padding:10px;
 }
 
-.petTable{
-    border: 1px solid black;
+.highlight{
+    background-color:grey;
+}
+
+.buttons{
+    display:flex;
+    justify-content:space-around;
 }

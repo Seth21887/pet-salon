@@ -43,7 +43,7 @@ function displayTable(){
         let pet=petSalon.pets[i];
     tr+=`
     
-    <tr>
+    <tr id="${pet.id}">
         <td>${pet.name}</td>
         <td>${pet.age}</td>
         <td>${pet.gender}</td>
@@ -51,6 +51,7 @@ function displayTable(){
         <td>${pet.service}</td>
         <td>${pet.ownersName}</td>
         <td>${pet.contactPhone}</td>
+        <td><button onclick="deletePet(${pet.id});">🗑️</button></td>
     </tr>
     `;
     }
