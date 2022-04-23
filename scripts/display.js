@@ -52,7 +52,7 @@ function displayTable(){
         <td>${pet.ownersName}</td>
         <td>${pet.contactPhone}</td>
     </tr>
-    `;
+    </table>`;
     }
     document.getElementById("pets").innerHTML=tmp;
 }
