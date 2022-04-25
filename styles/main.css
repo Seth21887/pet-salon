@@ -49,3 +49,8 @@ main{
     display:flex;
     justify-content:space-around;
 }
+
+.info{
+    background-color:rgb(91, 91, 150);
+    color:yellow;
+}

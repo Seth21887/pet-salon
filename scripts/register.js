@@ -15,7 +15,7 @@ let petSalon = {
 let c=0; //this is a counter var
 //name,age,gender,breed,service,owner name, contact phone
 //this is the constructor model
-function Pet(name,age,breed,gender,service,ownersName,contactPhone){
+function Pet(name,age,breed,gender,color,service,ownersName,contactPhone){
     this.name=name;
     this.age=age;
     this.breed=breed;
@@ -24,6 +24,7 @@ function Pet(name,age,breed,gender,service,ownersName,contactPhone){
     this.ownersName=ownersName;
     this.contactPhone=contactPhone;
     this.id=c++; //increase the var 1 every time its used
+    this.color=color;
 }
 
 //get the info from the inputs and store the information
@@ -31,6 +32,7 @@ let inputName=document.getElementById("txtName");
 let inputAge=document.getElementById("txtAge");
 let inputGender=document.getElementById("txtGender");
 let inputBreed=document.getElementById("txtBreed");
+let inputColor=document.getElementById("txtColor");
 let inputService=document.getElementById("selService");
 let inputOwner=document.getElementById("txtOwner");
 let inputPhone=document.getElementById("txtPhone");
@@ -55,7 +57,7 @@ function isValid(aPet){
 }
 function register(){
     //create the pet
-    let thePet = new Pet(inputName.value,inputAge.value,inputGender.value,inputBreed.value,inputService.value,inputOwner.value,inputPhone.value);
+    let thePet = new Pet(inputName.value,inputAge.value,inputGender.value,inputBreed.value,inputColor.value,inputService.value,inputOwner.value,inputPhone.value);
     if(isValid(thePet)){
     //push the pet into the array
     petSalon.pets.push(thePet);
@@ -70,6 +72,7 @@ function clearInputs(){
     inputAge.value="";
     inputGender.value="";
     inputBreed.value="";
+    inputColor.value="";
     inputService.value="";
     inputOwner.value="";
     inputPhone.value="";
@@ -122,10 +125,10 @@ function searchPet(){
         //highlight the result
 }
 
-let scooby = new Pet("Scooby",50,"Dane","Male","Grooming","Shaggy","555-555-5555");
-let scrappy = new Pet("Scrappy",40,"Mixed","Male","Grooming","Shaggy","555-555-5555");
-let bowser = new Pet("Bowser", 12, "English Bulldog", "Male", "Grooming", "Seth", "619-555-4444");
-let tommyPickles = new Pet("Tommy Pickles",6,"Pug","Male","Grooming","Seth","619-555-4444");
+let scooby = new Pet("Scooby",50,"Dane","Male","Brown","Grooming","Shaggy","555-555-5555");
+let scrappy = new Pet("Scrappy",40,"Mixed","Male","Brown","Grooming","Shaggy","555-555-5555");
+let bowser = new Pet("Bowser", 12, "English Bulldog", "Male", "Brindle","Grooming", "Seth", "619-555-4444");
+let tommyPickles = new Pet("Tommy Pickles",6,"Pug","Male","Gray","Grooming","Seth","619-555-4444");
 petSalon.pets.push(scooby,scrappy,bowser,tommyPickles);
 
 displayTable();
